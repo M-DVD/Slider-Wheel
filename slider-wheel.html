@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+	<title>Slider Wheel</title>
+	<meta name="description" content="A Slider Wheel made using Bootstrap and JQuery" />
+	<meta name="keywords" content="slider, wheel, bootstrap, jquery" />
+	<meta name="author" content="David Mejias" />
+	<meta name="copyright" content="Info-DVD, M-DVD" />
+	<meta name="license" content="MIT License" />
+
+	<link rel="stylesheet" type="text/css" href="dist/bootstrap.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/slider-wheel.css" />
+
+<style>
+.dvd_fixed_slider { font-family: sans-serif; font-style: normal; }
+.slide_text .title { font-size: 36px; color: #fff; line-height: 2.8125rem; font-weight: 700; }
+.slide_text .description { font-size: 1rem; color: #fff; line-height: 1.75; font-weight: 300; margin-bottom: 20px; }
+.slide_text .button { font-size: 1rem; color: #333; line-height: 1; font-weight: 700; background: hsla(0,0%,100%,.82); }
+.slide_text .button { text-align: center; padding: 14px 40px 12px; display: inline-block; }
+.slide_dots_wheel a { font-size: .875rem; color: #fff; line-height: 1.2em; }
+
+.slide_dots_wheel a:first-child .slide_dot,
+.slide_dots_wheel a:hover       .slide_dot { background-color: #0078d4; }
+.slide_dots_wheel .slide_dot { background-color: #fff; }
+</style>
+</head>
+
+<body>
+
+	<div class="p-5" style="height: 40vh">
+		<h1>A Slider Wheel example made using Bootstrap and JQuery.</h1>
+	</div>
+
+<!-- Slider - BEGIN -->
+	<div class="dvd_fixed_slider">
+		<div class="slides_bg">
+			<div id="slide_01" style="background-image: url('assets/backg-agronomic.jpg')"></div>
+			<div id="slide_02" style="background-image: url('assets/backg-telecom.jpg')"></div>
+			<div id="slide_03" style="background-image: url('assets/backg-electrical.jpg')"></div>
+			<div id="slide_04" style="background-image: url('assets/backg-computer.jpg')"></div>
+			<div id="slide_05" style="background-image: url('assets/backg-business.jpg')"></div>
+		</div>
+		<div class="slides_fg">
+			<ul class="nav navbar-nav">
+			<!-- Slide 01 -->
+			<li id="slide-01" class="row slide_nth active">
+				<a class="d-none" href="#slide_01"></a>
+				<div class="col-md-7 col-xl-6 mw-100">
+					<div class="slide_imag mx-auto ml-md-0 ml-lg-auto mr-lg-0">
+						<div class="slide_dial">
+							<img src="assets/dial-disk-md.png" class="d-none d-md-block" />
+							<img src="assets/dial-disk-sm.png" class="d-block d-md-none" />
+						</div>
+						<div class="slide_thumb_bg"
+							 style="background-image: url('assets/thumb-agronomic.png')">
+						</div>
+						<div class="slide_dots_wheel">
+							<a href="#slide_01"><i class="slide_dot"></i><span>Agronomic</span></a>
+							<a href="#slide_05"><i class="slide_dot"></i><span>Business</span></a>
+							<a href="#slide_04"><i class="slide_dot"></i><span>Computer</span></a>
+							<a href="#slide_03"><i class="slide_dot"></i><span>Electrical</span></a>
+							<a href="#slide_02"><i class="slide_dot"></i><span>Telecommunications</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-xl-6 mw-100 justify-content-start justify-content-md-center">
+					<div class="slide_text mx-auto mr-md-0 ml-lg-0 text-center text-md-left">
+						<h3 class="title">Agronomic Engineering</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit cursus sociis est malesuada,
+							cubilia convallis parturient aliquam diam posuere ultricies ullamcorper elementum odio nam.
+						</p>
+						<a class="button" href="https://flex.com/sketch-to-scale/innovate">Learn more</a>
+					</div>
+				</div>
+			</li>
+			<!-- Slide 02 -->
+			<li id="slide-02" class="row slide_nth">
+				<a class="d-none" href="#slide_02"></a>
+				<div class="col-md-7 col-xl-6 mw-100">
+					<div class="slide_imag mx-auto ml-md-0 ml-lg-auto mr-lg-0">
+						<div class="slide_dial">
+							<img src="assets/dial-disk-md.png" class="d-none d-md-block" />
+							<img src="assets/dial-disk-sm.png" class="d-block d-md-none" />
+						</div>
+						<div class="slide_thumb_bg"
+							 style="background-image: url('assets/thumb-telecom.png')">
+						</div>
+						<div class="slide_dots_wheel">
+							<a href="#slide_02"><i class="slide_dot"></i><span>Telecommunications</span></a>
+							<a href="#slide_01"><i class="slide_dot"></i><span>Agronomic</span></a>
+							<a href="#slide_05"><i class="slide_dot"></i><span>Business</span></a>
+							<a href="#slide_04"><i class="slide_dot"></i><span>Computer</span></a>
+							<a href="#slide_03"><i class="slide_dot"></i><span>Electrical</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-xl-6 mw-100 justify-content-start justify-content-md-center">
+					<div class="slide_text mx-auto mr-md-0 ml-lg-0 text-center text-md-left">
+						<h3 class="title">Engineering Telecom</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit cursus sociis est malesuada,
+							cubilia convallis parturient aliquam diam posuere ultricies ullamcorper elementum odio nam.
+						</p>
+						<a class="button" href="https://flex.com/sketch-to-scale/design-and-develop">Learn more</a>
+					</div>
+				</div>
+			</li>
+			<!-- Slide 03 -->
+			<li id="slide-03" class="row slide_nth">
+				<a class="d-none" href="#slide_03"></a>
+				<div class="col-md-7 col-xl-6 mw-100">
+					<div class="slide_imag mx-auto ml-md-0 ml-lg-auto mr-lg-0">
+						<div class="slide_dial">
+							<img src="assets/dial-disk-md.png" class="d-none d-md-block" />
+							<img src="assets/dial-disk-sm.png" class="d-block d-md-none" />
+						</div>
+						<div class="slide_thumb_bg"
+							 style="background-image: url('assets/thumb-electrical.png')">
+						</div>
+						<div class="slide_dots_wheel">
+							<a href="#slide_03"><i class="slide_dot"></i><span>Electrical</span></a>
+							<a href="#slide_02"><i class="slide_dot"></i><span>Telecommunications</span></a>
+							<a href="#slide_01"><i class="slide_dot"></i><span>Agronomic</span></a>
+							<a href="#slide_05"><i class="slide_dot"></i><span>Business</span></a>
+							<a href="#slide_04"><i class="slide_dot"></i><span>Computer</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-xl-6 mw-100 justify-content-start justify-content-md-center">
+					<div class="slide_text mx-auto mr-md-0 ml-lg-0 text-center text-md-left">
+						<h3 class="title">Electrical Engineering</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit cursus sociis est malesuada,
+							cubilia convallis parturient aliquam diam posuere ultricies ullamcorper elementum odio nam.
+						</p>
+						<a class="button" href="https://flex.com/sketch-to-scale/build">Learn more</a>
+					</div>
+				</div>
+			</li>
+			<!-- Slide 04 -->
+			<li id="slide-04" class="row slide_nth">
+				<a class="d-none" href="#slide_04"></a>
+				<div class="col-md-7 col-xl-6 mw-100">
+					<div class="slide_imag mx-auto ml-md-0 ml-lg-auto mr-lg-0">
+						<div class="slide_dial">
+							<img src="assets/dial-disk-md.png" class="d-none d-md-block" />
+							<img src="assets/dial-disk-sm.png" class="d-block d-md-none" />
+						</div>
+						<div class="slide_thumb_bg"
+							 style="background-image: url('assets/thumb-computer.png')">
+						</div>
+						<div class="slide_dots_wheel">
+							<a href="#slide_04"><i class="slide_dot"></i><span>Computer</span></a>
+							<a href="#slide_03"><i class="slide_dot"></i><span>Electrical</span></a>
+							<a href="#slide_02"><i class="slide_dot"></i><span>Telecommunications</span></a>
+							<a href="#slide_01"><i class="slide_dot"></i><span>Agronomic</span></a>
+							<a href="#slide_05"><i class="slide_dot"></i><span>Business</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-xl-6 mw-100 justify-content-start justify-content-md-center">
+					<div class="slide_text mx-auto mr-md-0 ml-lg-0 text-center text-md-left">
+						<h3 class="title">Computer Science</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit cursus sociis est malesuada,
+							cubilia convallis parturient aliquam diam posuere ultricies ullamcorper elementum odio nam.
+						</p>
+						<a class="button" href="https://flex.com/sketch-to-scale/deliver">Learn more</a>
+					</div>
+				</div>
+			</li>
+			<!-- Slide 05 -->
+			<li id="slide-05" class="row slide_nth">
+				<a class="d-none" href="#slide_05"></a>
+				<div class="col-md-7 col-xl-6 mw-100">
+					<div class="slide_imag mx-auto ml-md-0 ml-lg-auto mr-lg-0">
+						<div class="slide_dial">
+							<img src="assets/dial-disk-md.png" class="d-none d-md-block" />
+							<img src="assets/dial-disk-sm.png" class="d-block d-md-none" />
+						</div>
+						<div class="slide_thumb_bg"
+							 style="background-image: url('assets/thumb-business.png')">
+						</div>
+						<div class="slide_dots_wheel">
+							<a href="#slide_05"><i class="slide_dot"></i><span>Business</span></a>
+							<a href="#slide_04"><i class="slide_dot"></i><span>Computer</span></a>
+							<a href="#slide_03"><i class="slide_dot"></i><span>Electrical</span></a>
+							<a href="#slide_02"><i class="slide_dot"></i><span>Telecommunications</span></a>
+							<a href="#slide_01"><i class="slide_dot"></i><span>Agronomic</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 col-xl-6 mw-100 justify-content-start justify-content-md-center">
+					<div class="slide_text mx-auto mr-md-0 ml-lg-0 text-center text-md-left">
+						<h3 class="title">Business Analytics</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit cursus sociis est malesuada,
+							cubilia convallis parturient aliquam diam posuere ultricies ullamcorper elementum odio nam.
+						</p>
+						<a class="button" href="https://flex.com/sketch-to-scale/manage">Learn more</a>
+					</div>
+				</div>
+			</li>
+			<!-- Slide - END -->
+			</ul>
+		</div>
+	</div>
+<!-- Slider - END -->
+
+	<div class="p-5" style="height: 100vh">
+		<h2>Footer, yadda yadda</h2>
+	</div>
+
+	<script src="public/slider-wheel.js"></script>
+
+</body>
+</html>
