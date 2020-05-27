@@ -1,8 +1,7 @@
 # Slider-Wheel
-# ============
 
-	A Slider Wheel made using Bootstrap and JQuery.
-	v0.5: Here is simple example. This example have 5 slides.
+A Slider Wheel made using Bootstrap and JQuery.
+v0.5: Here is simple example. This example have 5 slides.
 
 I'll be adding the sources for the images.
 
